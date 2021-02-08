@@ -1,3 +1,7 @@
+package Library;
+
+import Library.Library;
+
 public class Librarian
 {
     private Library library;

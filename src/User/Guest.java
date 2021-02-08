@@ -1,3 +1,7 @@
+package User;
+
+import Library.Library;
+
 public class Guest
 {
     private Library library;
@@ -7,11 +11,11 @@ public class Guest
         this.setLibrary(_Library);
     }
 
-    private void setLibrary(Library _library) {
-        this.library = _library;
+    private void setLibrary(Library _Library) {
+        this.library = _Library;
     }
 
-    void seeContentOfLibrary()
+    public void seeContentOfLibrary()
     {
         this.library.showAllBooks();
     }

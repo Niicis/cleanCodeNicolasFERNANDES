@@ -1,3 +1,5 @@
+package Library;
+
 public class Books
 {
     private String title;
@@ -13,8 +15,8 @@ public class Books
         this.author = _Author;
     }
 
-    private void setTitle(String _title) {
-        this.title = _title;
+    private void setTitle(String _Title) {
+        this.title = _Title;
     }
 
     private String getTitle()
