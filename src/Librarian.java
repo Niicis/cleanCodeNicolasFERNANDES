@@ -11,11 +11,6 @@ public class Librarian
         this.library = _library;
     }
 
-    public void addReferenceBook(String _Reference,Books _Book)
-    {
-        _Book.addReference(_Reference);
-    }
-
     public void addBookToLibrary(Books _Book)
     {
         this.library.addBook(_Book);

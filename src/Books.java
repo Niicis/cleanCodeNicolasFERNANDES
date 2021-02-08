@@ -2,7 +2,6 @@ public class Books
 {
     private String title;
     private String author;
-    private String reference;
 
     public Books(String _title, String _Author)
     {
@@ -18,10 +17,6 @@ public class Books
         this.title = _title;
     }
 
-    private void setTReference(String _Reference) {
-        this.reference = _Reference;
-    }
-
     private String getTitle()
     {
         return this.title;
@@ -32,17 +27,9 @@ public class Books
         return this.author;
     }
 
-    private String getReference()
-    {
-        return this.reference;
-    }
-
     public String BookDescription()
     {
-        return "Title : " + this.getTitle() + " write by " + this.getAuthor() + " reference : " + this.getReference();
+        return "Title : " + this.getTitle() + " write by " + this.getAuthor();
     }
 
-    public void addReference(String _Reference) {
-        this.setTReference(_Reference);
-    }
 }

@@ -23,4 +23,9 @@ public class Library
     {
         System.out.println(_Books.BookDescription());
     }
+
+    private void removeBook(Books _Books)
+    {
+        this.allBooks.remove(_Books);
+    }
 }
