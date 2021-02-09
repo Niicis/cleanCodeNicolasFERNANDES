@@ -15,8 +15,17 @@ public class Librarian
         this.library = _library;
     }
 
-    public void addBookToLibrary(Books _Book)
+    public void addBookToLibrary(String _Title,String _Authors)
     {
-        this.library.addBook(_Book);
+        this.library.addBook(new Books(_Title,_Authors));
+    }
+
+    public void addBookToLibrary(Books _Books)
+    {
+        this.library.addBook(_Books);
+    }
+
+    public void seeContentOfLibrary() {
+        this.library.showAllBooks();
     }
 }

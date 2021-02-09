@@ -1,14 +1,9 @@
-import Library.Library;
-
 public class Execute {
 
-    public static void main(String[] args) {
-        Library l = new Library("nn");
-        l.addBook(new Books("rr","rr"));
-        l.showAllBooks();
-        Member m = new Member(l);
-        m.borrowBook(0);
+    private static final String _Path = System.getProperty("user.dir") + "\\src\\Library\\LibraryData\\dataBook.txt";
 
-        l.showAllBooks();
+    public static void main(String[] args) {
+        App app = new App(_Path);
+        app.launchApp();
     }
 }

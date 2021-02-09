@@ -15,8 +15,7 @@ public class Guest
         this.library = _Library;
     }
 
-    public void seeContentOfLibrary()
-    {
+    public void seeContentOfLibrary() {
         this.library.showAllBooks();
     }
 }

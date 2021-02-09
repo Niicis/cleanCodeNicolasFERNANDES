@@ -1,21 +1,29 @@
 package Library;
 
+import Library.LibraryData.readFile;
+
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 public class Library
 {
     private ArrayList<Books> allBooks;
-    private File fileWithbook;
+    private readFile fileWithBook;
 
-    public Library(String _PathLibrary) {
+    public Library(String _PathLibrary)  {
         this.allBooks = new ArrayList<>();
+        this.fileWithBook = new readFile(_PathLibrary);
         this.initialiseLibrary();
-        this.fileWithbook = new File(_PathLibrary);
     }
 
     private void initialiseLibrary() {
-
+        while(fileWithBook.hasNextLine())
+        {
+            String currLine = fileWithBook.getLine();
+            String[] splitedLine = currLine.split(",");
+            this.addBook(splitedLine[0],splitedLine[1]);
+        }
     }
 
     public void addBook(Books _Book) {
@@ -27,24 +35,18 @@ public class Library
     }
 
     public void showAllBooks() {
+        int index = 0;
         for (Books _Books: this.allBooks) {
-            this.showBook(_Books);
+            this.showBook(_Books,index++);
         }
     }
     
-    private void showBook(Books _Book) {
-        System.out.println(_Book.BookDescription());
+    private void showBook(Books _Book,int indexOfBook) {
+        System.out.println(indexOfBook + " - " + _Book.BookDescription());
     }
 
     public Books removeBook(int _IndexBook) {
         return this.allBooks.remove(_IndexBook);
     }
 
-    private int getIndexOfBook(Books _Book) {
-        return this.allBooks.indexOf(_Book);
-    }
-
-    public Books selectedBook(int indexOfBook) {
-        return this.allBooks.get(indexOfBook);
-    }
 }
