@@ -52,16 +52,16 @@ public class ShowOnConsole {
     }
 
     public void errorUserNumber() {
-        System.out.println("Pls next time select a number in the list\n");
+        System.out.println("Pls next time select a number in the list");
     }
 
     public int choseMemberIndexBorrowedBook() {
-        System.out.println("Which one do you want to borrow, select a number ?");
+        System.out.println("Which one do you want to borrow, select a number");
         return this.choseMemberIndexBook();
     }
 
     public int choseMemberIndexReturnedBook() {
-        System.out.println("Which one do you want to return, select a number ?");
+        System.out.println("Which one do you want to return, select a number");
         return this.choseMemberIndexBook();
     }
 
